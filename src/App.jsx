@@ -1,6 +1,7 @@
 import Features from "./components/Features";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Pricing from "./components/Pricing";
 import Workflow from "./components/Workflow";
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
         <Hero />
         <Features />
         <Workflow />
+        <Pricing />
       </div>
     </>
   )
