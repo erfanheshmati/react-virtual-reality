@@ -37,17 +37,17 @@ export default function Navbar() {
                     </div>
                     {/* Mobile Btn */}
                     <div className="lg:hidden md:flex flex-col justify-end">
-                        <button onClick={toggleNavbar}>
+                        <button onClick={toggleNavbar} className="hover:opacity-70">
                             {mobileDrawerOpen ? <X /> : <Menu />}
                         </button>
                     </div>
                 </div>
                 {/* Mobile Menu */}
                 {mobileDrawerOpen && (
-                    <div className="fixed right-0 z-20 mt-4 bg-neutral-900 w-full pt-4 pb-10 flex flex-col justify-center items-center lg:hidden">
+                    <div className="fixed right-0 z-20 mt-3 bg-neutral-900 w-full pt-4 pb-10 flex flex-col justify-center items-center lg:hidden">
                         <ul>
                             {navItems.map((item, index) => (
-                                <li key={index} className="py-4">
+                                <li key={index} className="py-4 hover:opacity-70">
                                     <a href={item.href}>
                                         {item.label}
                                     </a>
@@ -55,10 +55,10 @@ export default function Navbar() {
                             ))}
                         </ul>
                         <div className="flex space-x-6 mt-6">
-                            <a href="#" className="py-2 px-3 border rounded-md">
+                            <a href="#" className="py-2 px-3 border rounded-md hover:opacity-70">
                                 Sign In
                             </a>
-                            <a href="#" className="py-2 px-3 rounded-md bg-gradient-to-r from-orange-500 to-orange-800">
+                            <a href="#" className="py-2 px-3 rounded-md bg-gradient-to-r from-orange-500 to-orange-800 hover:opacity-70">
                                 Create an account
                             </a>
                         </div>
